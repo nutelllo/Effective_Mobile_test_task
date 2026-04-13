@@ -1,0 +1,14 @@
+# Environment variables (могут содержать секреты)
+.env
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+
+# OS артефакты
+.DS_Store
+Thumbs.db
+
+# Логи
+*.log
