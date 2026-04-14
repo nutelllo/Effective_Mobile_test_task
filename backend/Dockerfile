@@ -1,5 +1,8 @@
 FROM python:3.12-alpine
 
+ENV PYTHONDONTWRITEBYTECODE=1 \
+    PYTHONUNBUFFERED=1
+
 EXPOSE 8080
 
 WORKDIR /app
@@ -12,4 +15,4 @@ HEALTHCHECK --interval=10s --timeout=5s --start-period=15s --retries=5 \
 RUN adduser -D -u 1001 appuser
 USER appuser
 
-ENTRYPOINT ["python", "-u", "app.py"]
+ENTRYPOINT ["python", "app.py"]
